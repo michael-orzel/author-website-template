@@ -1,0 +1,320 @@
+:root {
+  font-size: 1rem;
+  --txt: #FFF;
+  --txt-contrast: #000;
+  --txt-different: #EEE;
+  --txt-more-different: #D6D6D6;
+  --txt-placeholder: #595959;
+  --bg: #404142;
+  --bg-darker: #363738;
+  --bg-lighter: #969696;
+  --bg-lightest: #D6D6D6;
+  --primary: #AA1F2E;
+  --secondary: #3F5568;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--txt);
+  background: var(--bg);
+  line-height: 1.5;
+  line-length: 36rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 7rem;
+  margin: 0;
+}
+
+.container {
+  flex: 1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navigation */
+
+.nav {
+  background: var(--bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 0.0625rem;
+  overflow: hidden;
+  box-shadow: 0 0.0625rem 0.0625rem 0.0625rem rgba(0,0,0,.1);
+  z-index: 10;
+}
+
+.nav-logo {
+  flex-grow: 1;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+}
+
+.nav-filler {
+  flex-grow: 2;
+}
+
+.nav-bars {
+  color: var(--txt);
+  background: var(--bg);
+  font-size: 1.25rem;
+  padding: 2.75rem 2rem 2.75rem 2rem;
+  cursor: pointer;
+}
+
+.nav-bars:hover {
+  color: var(--txt-contrast);
+  background: var(--bg-lightest);
+}
+
+.nav-bars:active {
+  color: var(--txt);
+  background: var(--bg-darker);
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav ul li a {
+  display: block;
+  color: var(--txt);
+  border-bottom: 0.5rem solid var(--bg);
+  border-radius: 0.0625rem;
+  padding: 3rem 2rem 2.5rem 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  color: var(--txt-contrast);
+  background: var(--bg-lightest);
+  text-decoration: underline;
+}
+
+.nav ul li a:active {
+  color: var(--txt);
+  background: var(--bg-darker);
+}
+
+.nav [aria-current=page] {
+  color: var(--txt-contrast);
+  background: var(--bg-lighter);
+}
+
+.nav-dropdown { /* add css, STOP MAIN PAGE SCROLL */
+  display: none;
+  position: absolute;
+  background: var(--bg);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  border-radius: 0.0625rem;
+  overflow: auto;
+  z-index: 12;
+}
+ /* dropdown nav li's */
+.nav-dropdown ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-dropdown ul li {
+  list-style: none;
+}
+
+.nav-dropdown ul li a {
+  display: block;
+  color: var(--txt);
+  font-size: 1.25rem;
+  font-weight: 700;
+  min-width: 15rem;
+  padding: 3rem 2rem 3rem 2rem;
+  text-decoration: none;
+}
+
+.nav-dropdown ul li a:hover {
+  color: var(--txt-contrast);
+  background: var(--bg-lightest);
+  text-decoration: underline;
+}
+
+.nav-dropdown ul li a:active {
+  color: var(--txt);
+  background: var(--bg-darker);
+}
+
+.nav-dropdown [aria-current=page] {
+  color: var(--txt-contrast);
+  background: var(--bg-lighter);
+}
+/* end dropdown nav li's */
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  cursor: pointer;
+  z-index: 11;
+}
+
+/* Footer */
+
+footer {
+  color: var(--txt-different);
+  background: var(--bg);
+  flex-shrink: 0;
+}
+
+footer a {
+  color: var(--txt-different);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+small {
+  color: var(--txt-more-different);
+}
+
+.ft-title {
+  font-family: sans-serif;
+  font-size: 1.375rem;
+  color: var(--txt);
+  padding-bottom: 0.625rem;
+}
+
+.ft-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1.25rem 1.875rem;
+}
+
+.ft-main-item {
+  min-width: 12.5rem;
+  padding: 1.25rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input[type="email"] {
+  border: 0;
+  padding: 0.625rem;
+  margin-top: 0.3125rem;
+}
+
+input[type="email"]::placeholder {
+  color: var(--txt-placeholder);
+  opacity: 1;
+}
+
+input[type="submit"] {
+  color: var(--txt);
+  background: var(--primary);
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 0.3125rem;
+}
+
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  border-top: 0.0625rem var(--bg-lighter) solid;
+  padding-top: 1.25rem;
+}
+
+.ft-social-list li {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.ft-legal {
+    background-color: var(--bg-darker);
+    padding: 0.9375rem 1.875rem;
+}
+
+.ft-legal-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+}
+
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;
+}
+
+/* Media Queries */
+
+@media (max-width: 45rem /*720px*/) {
+  .ft-main {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 77.5rem /*1240px*/ ) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+
+/*
+https://www.orbitmedia.com/blog/web-design-standards/
+https://www.orbitmedia.com/blog/website-footer-design-best-practices/
+https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-multi-level-sticky-footer-with-flexbox--cms-33341
+WAI
+https://www.w3.org/WAI/tutorials/menus/
+Basics:
+https://pos.toasttab.com/blog/7-things-restaurant-websites-need-to-include
+Essential Copywriting Tips for Important Pages:
+https://blog.hubspot.com/marketing/copywriting-tips-for-website-ht
+Visual Story Telling:
+https://medium.com/visual-stories/10-simple-rules-of-visual-storytelling-4ee868498447#.xfo8kfi1v
+*/
