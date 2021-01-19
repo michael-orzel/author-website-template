@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Website Concept</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/26e96b4f88.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js" defer></script> <!-- defer/async -->
+  </head>
+  <body>
+    <div class="overlay"></div>
+      <header>
+        <nav class="nav" role="navigation" aria-label="Main Navigation">
+          <div class="nav-logo">
+            <a href="index.html"><img src="https://www.applebees.com/-/media/applebees/images/logos/logo.png?h=88&la=en&w=162&hash=167634130AC39DB0286D56EF0F8AEDF717BC3205"></a>
+          </div>
+          <div class="nav-items">
+            <ul role="menubar">
+              <li><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+              <li><a href="" role="menuitem">Menu</a></li>
+              <li><a href="location.html" role="menuitem">Location</a></li>
+              <li><a href="" role="menuitem">Events</a></li>
+              <li><a href="" role="menuitem">About</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-filler"></div>
+          
+          <button type="button" class="nav-bars">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        
+        <!-- modify nav-items class names to make css for dropdown -->
+        <nav class="nav-dropdown" role="navigation" aria-label="Main Navigation Dropdown">
+          <div class="nav-items"> <!-- remove?? -->
+            <ul role="menubar">
+              <li><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+              <li><a href="" role="menuitem">Menu</a></li>
+              <li><a href="location.html" role="menuitem">Location</a></li>
+              <li><a href="" role="menuitem">Events</a></li>
+              <li><a href="" role="menuitem">About</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+        <div class="hero-image" role="banner">
+          <div class="hero-text">
+            <p>Welcome to Applebee's</p>
+            <h1>Savor American Food and Casual Dining!</h1>
+            <p>Your go-to Neighborhood Grill + Bar</p>
+          </div>
+        </div>
+      </header>
+      
+      <main role="main">
+      
+      </main>
+    
+    <div class="container"></div>
+    <footer role="contentinfo">
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">Contact</h2>
+          <ul>
+            <li>Address: 12345 Example Rd, City, State 55555</li>
+            <li>Phone: (555) 555-5555</li>
+            <li>Email: contact@domain.com</li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Hours</h2>
+          <ul>
+            <li>Monday-Thursday: 11AM-12AM</li>
+            <li>Friday-Saturday: 11AM-1AM</li>
+            <li>Sunday: 11AM-11PM</li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Stay Updated</h2>
+          <p id="form-desc">Subscribe to our newsletter to get our latest news.</p>
+          <form role="form">
+            <input type="email" name="email" placeholder="Enter email address" required aria-label="Subscribe" aria-describedby="form-desc" aria-required="true">
+            <input type="submit" value="Submit" role="button">
+          </form>
+        </div>
+      </section>
+      
+      <section class="ft-social">
+        <ul class="ft-social-list">
+          <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a></li>
+        </ul>
+      </section>
+      
+      <section class="ft-legal">
+        <ul class="ft-legal-list">
+          <li><a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms &amp; Conditions</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a></li>
+          <li><small>&copy; Copyright 2020, Fake Website Practice Mock-Up</small></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
