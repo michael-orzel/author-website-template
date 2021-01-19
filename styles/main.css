@@ -37,6 +37,10 @@ body {
   margin: 0;
 }
 
+*:focus {
+  outline: 0.1875rem double var(--primary);
+}
+
 ul {
   list-style: none;
 }
