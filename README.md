@@ -1,2 +1,2 @@
-# author-website-template
+# Author Website Template
 Website skeleton for Authors.
