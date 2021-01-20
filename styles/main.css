@@ -1,21 +1,21 @@
 :root {
   font-size: 1rem;
-  --txt: #FFF;
-  --txt-contrast: #000;
-  --txt-different: #EEE;
-  --txt-more-different: #D6D6D6;
-  --txt-placeholder: #595959;
-  --bg: #404142;
-  --bg-darker: #363738;
-  --bg-lighter: #969696;
-  --bg-lightest: #D6D6D6;
-  --primary: #AA1F2E;
-  --secondary: #3F5568;
+  --black: #000;
+  --white: #FFF;
+  --white-darker: #EEE;
+  --white-darkest: #D6D6D6;
+  --gray: #404142;
+  --gray-darker: #363738;
+  --gray-lighter: #969696;
+  --gray-lightest: #D6D6D6;
+  --form-placeholder: #595959;
+  --bg: #f9f9f9;
+  --primary: #7400CC;
 }
 
 body {
   font-family: sans-serif;
-  color: var(--txt);
+  color: var(--black);
   background: var(--bg);
   line-height: 1.5;
   line-length: 36rem;
@@ -38,7 +38,7 @@ body {
 }
 
 *:focus {
-  outline: 0.1875rem double var(--primary);
+  outline: 0.0625rem dashed var(--primary);
 }
 
 ul {
@@ -56,28 +56,28 @@ ul {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 5.5rem;
+  height: 3.5rem;
   border-radius: 0.0625rem;
   overflow: hidden;
   box-shadow: 0 0.0625rem 0.0625rem 0.0625rem rgba(0,0,0,.1);
   z-index: 10;
 }
 
-.nav-logo {
+/* .nav-logo {
   flex-grow: 1;
   padding-left: 0.3125rem;
   padding-right: 0.3125rem;
-}
+} */
 
-.nav-filler {
+/*.nav-filler {
   flex-grow: 2;
-}
+} */
 
 .nav-bars {
-  color: var(--txt);
+  color: var(--gray);
   background: var(--bg);
   font-size: 1.25rem;
-  padding: 2.75rem 2rem 2.75rem 2rem;
+  padding: 2.75rem 1.5rem 2.75rem 1.5rem;
   cursor: pointer;
 }
 
@@ -105,28 +105,26 @@ ul {
 
 .nav ul li a {
   display: block;
-  color: var(--txt);
-  border-bottom: 0.5rem solid var(--bg);
+  color: var(--gray);
+  border-bottom: 0.1875rem solid transparent;
   border-radius: 0.0625rem;
-  padding: 3rem 2rem 2.5rem 2rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   font-weight: 700;
   text-decoration: none;
 }
 
 .nav ul li a:hover {
-  color: var(--txt-contrast);
-  background: var(--bg-lightest);
-  text-decoration: underline;
+  border-bottom: 0.1875rem solid var(--primary);
 }
 
 .nav ul li a:active {
-  color: var(--txt);
-  background: var(--bg-darker);
+  color: var(--primary);
+  border-bottom: 0.1875rem solid var(--primary);
 }
 
 .nav [aria-current=page] {
-  color: var(--txt-contrast);
-  background: var(--bg-lighter);
+  color: var(--primary);
+  border-bottom: 0.1875rem solid var(--primary);
 }
 
 .nav-dropdown { /* add css, STOP MAIN PAGE SCROLL */
