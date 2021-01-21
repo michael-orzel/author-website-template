@@ -16,20 +16,18 @@
               <li><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
               <li><a href="about.html" role="menuitem">About</a></li>
               <li><a href="books.html" role="menuitem">Books</a></li>
-              <li><a href="blog.html" role="menuitem">Blog</a></li>
-              <li><a href="contact.html" role="menuitem">Contact</a></li>
+              <li><a href="blog.html" role="menuitem" id="mobile-hidden">Blog</a></li>
+              <li><a href="contact.html" role="menuitem" id="mobile-hidden">Contact</a></li>
             </ul>
           </div>
-
-          <div class="nav-filler"></div>
           
-          <button type="button" class="nav-bars">
+          <button type="button" class="nav-bars" id="mobile-only">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
         
         <!-- modify nav-items class names to make css for dropdown -->
-        <nav class="nav-dropdown" role="navigation" aria-label="Main Navigation Dropdown">
+        <nav class="nav-dropdown" role="navigation" aria-label="Full Navigation List">
           <div class="nav-items"> <!-- remove?? -->
             <ul role="menubar">
               <li><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
