@@ -212,6 +212,7 @@ ul {
 .ft-main {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   padding: 2rem 1.875rem 1.25rem 1.875rem;
 }
@@ -227,6 +228,7 @@ ul {
 
 .ft-main-item {
   min-width: 12.5rem;
+  max-width: 40ch;
   padding: 1.25rem;
 }
 
