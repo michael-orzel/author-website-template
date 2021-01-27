@@ -212,6 +212,7 @@ ul {
 .ft-main {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   padding: 2rem 1.875rem 1.25rem 1.875rem;
 }
@@ -227,7 +228,14 @@ ul {
 
 .ft-main-item {
   min-width: 12.5rem;
+  max-width: 40ch;
   padding: 1.25rem;
+}
+
+.ft-sign-up {
+  border: 0.0625rem dashed var(--gray-lighter);
+  border-left: 0.5rem double var(--gray-lighter);
+  border-radius: 0.3125rem;
 }
 
 .ft-heading {
@@ -240,6 +248,10 @@ ul {
 form {
   display: flex;
   flex-wrap: wrap;
+}
+
+#form-desc {
+  padding-bottom: .625rem;
 }
 
 input[type="email"] {
@@ -306,7 +318,14 @@ input[type="submit"] {
 /* Media Queries */
 
 @media (max-width: 45rem /*720px and smaller*/) {
+  body {
+    padding-top: 0rem;
+    padding-bottom: 3.5rem;
+  }
+
   .nav {
+    top: auto;
+    bottom: 0;
     justify-content: space-between;
   }
 
