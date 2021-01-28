@@ -211,10 +211,11 @@ ul {
 
 .ft-main {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 1.875rem 1.25rem 1.875rem;
+  flex-direction: column;
+  padding: 2rem 0rem 1.25rem 0rem;
 }
 
 .ft-main:after {
@@ -227,15 +228,16 @@ ul {
 }
 
 .ft-main-item {
-  min-width: 12.5rem;
-  max-width: 40ch;
+  max-width: 90%;
   padding: 1.25rem;
 }
 
 .ft-sign-up {
-  border: 0.0625rem dashed var(--gray-lighter);
-  border-left: 0.5rem double var(--gray-lighter);
+  border: 0.125rem solid var(--gray-lighter);
   border-radius: 0.3125rem;
+  padding: 40px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .ft-heading {
@@ -274,6 +276,13 @@ input[type="submit"] {
   margin-top: 0.3125rem;
 }
 
+.footer .contact-link {
+  font-size: 1.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 0.125rem solid var(--gray-lighter);
+  text-decoration: none;
+}
+
 .ft-social {
   padding: 0 1.875rem 1.25rem;
 }
@@ -281,6 +290,7 @@ input[type="submit"] {
 .ft-social-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   /*border-top: 0.0625rem solid var(--gray-lighter);*/
   padding-top: 1.25rem;
 }
@@ -338,7 +348,7 @@ input[type="submit"] {
   }
 
   .ft-main {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
@@ -350,7 +360,7 @@ input[type="submit"] {
 
 @media (min-width: 77.5rem /*1240px and larger*/) {
   .ft-main {
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
 
