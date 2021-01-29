@@ -11,6 +11,7 @@
   --form-placeholder: #595959;
   --bg: #f9f9f9;
   --primary: #7400CC;
+  --primary-lighter: #E2BDFF;
 }
 
 * {
@@ -215,7 +216,7 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 2rem 0rem 1.25rem 0rem;
+  padding: 3.5rem 0rem 1.25rem 0rem;
 }
 
 .ft-main:after {
@@ -235,8 +236,8 @@ ul {
 .ft-sign-up {
   border: 0.125rem solid var(--gray-lighter);
   border-radius: 0.3125rem;
-  padding: 40px;
-  margin-bottom: 20px;
+  padding: 2.5rem;
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 
@@ -249,31 +250,54 @@ ul {
 
 form {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #form-desc {
-  padding-bottom: .625rem;
+  /* padding-bottom: 0.8125rem; */
 }
 
 input[type="email"] {
+  font-size: 1.0625rem;
+  color: var(--black);
+  text-align: center;
   border: 0;
-  padding: 0.625rem;
-  margin-top: 0.3125rem;
+  border-radius: 0.0625rem;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 input[type="email"]::placeholder {
+  font-size: 1.0625rem;
   color: var(--form-placeholder);
+  text-align: center;
   opacity: 1;
 }
 
 input[type="submit"] {
-  color: var(--bg);
-  background: var(--primary);
+  font-size: 1.25rem;
+  color: var(--gray-darker);
+  background: var(--primary-lighter);
   cursor: pointer;
-  border: 0;
-  padding: 0.625rem 0.9375rem;
-  margin-top: 0.3125rem;
+  border: 0.125rem solid var(--primary-lighter);
+  border-radius: 0.0625rem;
+  padding: 0.75rem 2rem;
+}
+
+input[type="submit"]:hover {
+  color: var(--primary-lighter);
+  background: var(--gray-darker);
+  border: 0.125rem solid var(--primary-lighter);
+}
+
+input[type="submit"]:active {
+  color: var(--primary-lighter);
+  background: var(--gray-darker);
+  border: 0.125rem solid var(--primary-lighter);
 }
 
 .footer .contact-link {
