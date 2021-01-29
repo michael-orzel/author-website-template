@@ -1,2 +1,2 @@
 # Author Website Template
-Website skeleton for Authors.
+Website skeleton for Authors (incomplete).
