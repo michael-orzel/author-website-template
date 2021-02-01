@@ -10,16 +10,22 @@
   <body>
     <div class="overlay"></div>
       <header>
-        <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <nav class="nav" aria-label="Navigation Display">
+          <div class="nav-logo-section">
+            <a href="index.html" class="nav-author-logo">Conan Doyle</a>
+          </div>
+          
           <div class="nav-items">
             <ul role="menubar">
-              <li><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+              <li><a href="index.html" role="menuitem" aria-current="page" id="mobile-hidden">Home</a></li>
               <li><a href="about.html" role="menuitem">About</a></li>
               <li><a href="books.html" role="menuitem">Books</a></li>
               <li><a href="blog.html" role="menuitem" id="mobile-hidden">Blog</a></li>
-              <li><a href="contact.html" role="menuitem" id="mobile-hidden">Contact</a></li>
+              <li><a href="contact.html" role="menuitem" id="always-hidden">Contact</a></li>
             </ul>
           </div>
+
+          <a href="contact.html" class="nav-contact" id="mobile-hidden">Contact</a>
           
           <button type="button" class="nav-bars" id="mobile-only">
             <i class="fas fa-bars"></i>
@@ -27,7 +33,7 @@
         </nav>
         
         <!-- modify nav-items class names to make css for dropdown -->
-        <nav class="nav-dropdown" role="navigation" aria-label="Full Navigation List">
+        <nav class="nav-dropdown" role="navigation" aria-label="Main Navigation List">
           <div class="nav-items"> <!-- remove?? -->
             <ul role="menubar">
               <li><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
@@ -49,7 +55,7 @@
         
         <div class="hero-image" role="banner">
           <div class="hero-text">
-            
+
           </div>
         </div>
 
@@ -70,13 +76,14 @@
             </p>
           </form>
         </div>
-
-        <div class="ft-main-item">
-          <a href="contact.html" class="contact-link">Contact</a>
-        </div>
       </section>
-      
+
+      <section class="ft-author">
+        <a href="index.html" class="ft-author-logo">Conan Doyle</a>
+      </section>
+
       <section class="ft-social">
+        <p class="ft-social-header">Socials</p>
         <ul class="ft-social-list">
           <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
           <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
@@ -99,6 +106,8 @@
           <li><a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms &amp; Conditions</a></li>
           <li>|</li>
           <li><a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a></li>
+          <li>|</li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </section>
 

@@ -1,12 +1,13 @@
 :root {
   font-size: 1rem;
-  --black: #000;
   --white: #FFF;
+  --black: #000;
+  --gray: #999;
   --white-darker: #EEE;
   --white-darkest: #D6D6D6;
-  --gray: #404142;
-  --gray-darker: #363738;
-  --gray-lighter: #969696;
+  --black-lighter: #111;
+  --gray-darker: #444;
+  --gray-darkest: #363738;
   --gray-lightest: #D6D6D6;
   --form-placeholder: #595959;
   --bg: #f9f9f9;
@@ -54,7 +55,7 @@ ul {
   top: 0;
   left: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 3.5rem;
@@ -62,9 +63,32 @@ ul {
   overflow: hidden;
   box-shadow: 0 0.0625rem 0.0625rem 0.0625rem rgba(0,0,0,.1);
   filter: alpha(opacity=90);
-  opacity: 0.9;
+  opacity: 0.95;
   z-index: 10;
 }
+
+.nav-logo-section {
+  padding-left: 1.375rem;
+}
+
+.nav-author-logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--black-lighter);
+  padding: 0.25rem 0rem;
+  border-bottom: 0.125rem solid transparent;
+  border-radius: 0.0625rem;
+  text-decoration: none;
+}
+
+.nav-author-logo:hover {
+  border-bottom: 0.125rem solid var(--gray);
+}
+
+.nav-author-logo:active {
+  border-bottom: 0.125rem solid var(--gray);
+}
+
 
 .nav ul {
   display: flex;
@@ -79,8 +103,9 @@ ul {
 }
 
 .nav ul li a {
+  font-size: 0.9375rem;
   display: block;
-  color: var(--gray);
+  color: var(--black-lighter);
   border-bottom: 0.1875rem solid transparent;
   border-radius: 0.0625rem;
   padding: 0.9375rem 1.5rem 0.9375rem 1.5rem;
@@ -89,21 +114,23 @@ ul {
 }
 
 .nav ul li a:hover {
-  border-bottom: 0.1875rem solid var(--primary);
+  border-bottom: 0.1875rem solid var(--gray);
 }
 
 .nav ul li a:active {
-  color: var(--primary);
-  border-bottom: 0.1875rem solid var(--primary);
+  border-bottom: 0.1875rem solid var(--gray);
 }
 
 .nav [aria-current=page] {
-  color: var(--primary);
-  border-bottom: 0.1875rem solid var(--primary);
+  border-bottom: 0.1875rem solid var(--gray);
+}
+
+.nav-contact {
+
 }
 
 .nav-bars {
-  color: var(--gray);
+  color: var(--black-lighter);
   background: var(--bg);
   font-size: 1.25rem;
   padding: 2.75rem 1.5rem 2.75rem 1.5rem;
@@ -112,19 +139,18 @@ ul {
 }
 
 .nav-bars:hover {
-  color: var(--primary);
+  color: var(--gray);
   background: var(--bg);
 }
 
 .nav-bars:active {
-  color: var(--primary);
+  color: var(--gray);
   background: var(--bg);
 }
 
 .nav-dropdown {
   display: none;
   position: fixed;
-  color: var(--gray);
   background: var(--bg);
   top: 0;
   left: 0;
@@ -151,25 +177,27 @@ ul {
 
 .nav-dropdown ul li a {
   display: block;
-  color: var(--gray);
+  color: var(--black-lighter);
   font-size: 1.5rem;
   font-weight: 700;
   min-width: 15rem;
   padding: 1rem 1rem 1rem 1rem;
-  border-bottom: 0.0625rem solid var(--gray-lightest);
+  border-bottom: 0.1875rem solid transparent;
+  border-radius: 1rem;
+  text-align: center;
   text-decoration: none;
 }
 
 .nav-dropdown ul li a:hover {
-  color: var(--primary);
+  border-bottom: 0.1875rem solid var(--gray);
 }
 
 .nav-dropdown ul li a:active {
-  color: var(--primary);
+  border-bottom: 0.1875rem solid var(--gray);
 }
 
 .nav-dropdown [aria-current=page] {
-  color: var(--primary);
+  border-bottom: 0.1875rem solid var(--gray);
 }
 /* end dropdown nav li's */
 
@@ -190,43 +218,44 @@ ul {
 /* Footer */
 
 .footer {
-  color: var(--gray-lightest);
-  background: var(--gray-darker);
+  color: var(--gray);
+  background: var(--black);
   flex-shrink: 0;
 }
 
 .footer a {
-  color: var(--bg);
-  text-decoration: underline;
+  color: var(--white);
+  text-decoration: none;
 }
 
 .footer a:hover {
-  color: var(--gray-lightest);
-  text-decoration: none;
+  color: var(--white);
+  border-bottom: 0.125rem solid var(--gray-darker);
 }
 
 .footer a:active {
-  color: var(--bg);
-  text-decoration: none;
+  color: var(--white);
+  border-bottom: 0.125rem solid var(--gray-darker);
 }
 
 .ft-main {
+  background: var(--bg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: column;
   padding: 3.5rem 0rem 1.25rem 0rem;
 }
 
-.ft-main:after {
-  content: ""; /* This is necessary for the pseudo element to work. */ 
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0rem auto; /* This will center the border. */
-  width: 80%; /* Change this to whatever width you want. */
-  padding-top: 2.5rem; /* This creates some space between the element and the border. */
-  border-bottom: 0.0625px solid var(--gray-lighter); /* This creates the border. Replace black with whatever color you want. */
-}
+/*.ft-main:after {
+  content: ""; 
+  display: block; 
+  margin: 0rem auto; 
+  width: 80%; 
+  padding-top: 2.5rem; 
+  border-bottom: 0.0625rem solid var(--gray-lighter);
+} */
 
 .ft-main-item {
   max-width: 90%;
@@ -234,17 +263,18 @@ ul {
 }
 
 .ft-sign-up {
-  border: 0.125rem solid var(--gray-lighter);
-  border-radius: 0.3125rem;
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  background: var(--white);
+  border-radius: 0.125rem;
+  width: 43ch;
+  padding: 2rem 0rem 2rem 0rem;
   margin-bottom: 1.25rem;
   text-align: center;
 }
 
 .ft-heading {
   font-family: sans-serif;
-  font-size: 1.25rem;
-  color: var(--bg);
+  font-size: 1.125rem;
+  color: var(--black-lighter);
   padding-bottom: 0.625rem;
 }
 
@@ -278,7 +308,7 @@ input[type="email"]::placeholder {
 input[type="submit"] {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: var(--black);
+  color: var(--black-lighter);
   background: var(--primary-lighter);
   cursor: pointer;
   border: 0.0625rem solid var(--primary-lighter);
@@ -287,40 +317,50 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  color: var(--primary-lighter);
-  background: var(--gray-darker);
+  color: var(--black-lighter);
+  background: var(--white);
   border: 0.0625rem solid var(--primary-lighter);
 }
 
 input[type="submit"]:active {
-  color: var(--primary-lighter);
-  background: var(--gray-darker);
+  color: var(--black-lighter);
+  background: var(--white);
   border: 0.0625rem solid var(--primary-lighter);
 }
 
 #form-desc {
   font-style: italic;
   width: 30ch;
+  color: var(--gray-darkest);
   margin-top: 0.75rem;
 }
 
-.footer .contact-link {
-  font-size: 1.5rem;
-  padding: 0.625rem 1.25rem;
-  border: 0.125rem solid var(--gray-lighter);
-  text-decoration: none;
+.ft-author {
+  font-size: 1.125rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.ft-author-logo {
+  padding-bottom: 0.25rem;
 }
 
 .ft-social {
-  padding: 0 1.875rem 1.25rem;
+  padding: 1.5rem 1.875rem 1.25rem;
+}
+
+.ft-social-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .ft-social-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*border-top: 0.0625rem solid var(--gray-lighter);*/
-  padding-top: 1.25rem;
+  padding-top: 0.5rem;
 }
 
 .ft-social-list li {
@@ -328,25 +368,40 @@ input[type="submit"]:active {
   margin: 0.5rem;
 }
 
+.ft-social-list li a {
+  padding-bottom: 0.5rem;
+}
+
 .ft-legal {
-    background-color: var(--bg-darker);
-    padding: 0rem 1.875rem 3rem 1.875rem;
+  font-size: 0.8125rem;
+  padding: 0rem 1.875rem 4rem 1.875rem;
 }
 
 .ft-legal-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .ft-legal-list li {
-    margin: 0.125rem 0.625rem;
-    white-space: nowrap;
-    text-align: center;
+  margin: 0.125rem 0.625rem;
+  padding-bottom: 0.625rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.ft-legal-list li a {
+  color: var(--gray);
+  padding-bottom: 0.125rem;
 }
 
 .ft-legal-list li:first-child {
   width: 100%;
+}
+
+#always-hidden {
+  display: none;
 }
 
 /*.ft-legal-list li:nth-last-child(2) {
@@ -364,7 +419,6 @@ input[type="submit"]:active {
   .nav {
     top: auto;
     bottom: 0;
-    justify-content: space-between;
   }
 
   .nav-items {
@@ -387,6 +441,14 @@ input[type="submit"]:active {
 }
 
 @media (min-width: 77.5rem /*1240px and larger*/) {
+  .nav {
+    justify-content: space-around;
+  }
+
+  .nav-logo-section {
+    padding-left: 0rem;
+  }  
+
   .ft-main {
     justify-content: center;
   }
