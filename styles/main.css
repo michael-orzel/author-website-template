@@ -10,9 +10,11 @@
   --gray-darkest: #363738;
   --gray-lightest: #D6D6D6;
   --form-placeholder: #595959;
-  --bg: #f9f9f9;
-  --primary: #7400CC;
-  --primary-lighter: #E2BDFF;
+  --bg: #eae7dc;
+  --bg-two: #D8C3A5;
+  --text: #8E8D8A;
+  --primary: #E85A4F;
+  --primary-lighter: #E98074;
 }
 
 * {
@@ -28,7 +30,7 @@
 body {
   font-family: sans-serif;
   color: var(--black);
-  background: var(--bg);
+  background: var(--white);
   line-height: 1.5;
   line-length: 36rem;
   font-weight: 400;
@@ -71,7 +73,7 @@ ul {
   padding-left: 1.375rem;
 }
 
-.nav-author-logo {
+.nav-brand-logo {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--black-lighter);
@@ -81,11 +83,11 @@ ul {
   text-decoration: none;
 }
 
-.nav-author-logo:hover {
+.nav-brand-logo:hover {
   border-bottom: 0.125rem solid var(--gray);
 }
 
-.nav-author-logo:active {
+.nav-brand-logo:active {
   border-bottom: 0.125rem solid var(--gray);
 }
 
@@ -125,8 +127,26 @@ ul {
   border-bottom: 0.1875rem solid var(--gray);
 }
 
-.nav-contact {
+.nav-contact-section {
+  padding-right: 1.375rem;
+}
 
+.nav-contact {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black-lighter);
+  padding: 0.25rem 0rem;
+  border-bottom: 0.125rem solid transparent;
+  border-radius: 0.0625rem;
+  text-decoration: none;
+}
+
+.nav-contact:hover {
+  border-bottom: 0.125rem solid var(--gray);
+}
+
+.nav-contact:active {
+  border-bottom: 0.125rem solid var(--gray);
 }
 
 .nav-bars {
@@ -183,7 +203,7 @@ ul {
   min-width: 15rem;
   padding: 1rem 1rem 1rem 1rem;
   border-bottom: 0.1875rem solid transparent;
-  border-radius: 1rem;
+  border-radius: 0.0625rem;
   text-align: center;
   text-decoration: none;
 }
@@ -238,17 +258,17 @@ ul {
   border-bottom: 0.125rem solid var(--gray-darker);
 }
 
-.ft-main {
+.ft-cta {
   background: var(--bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 3.5rem 0rem 1.25rem 0rem;
+  padding: 1.25rem 0rem 1.25rem 0rem;
 }
 
-/*.ft-main:after {
+/*.ft-cta:after {
   content: ""; 
   display: block; 
   margin: 0rem auto; 
@@ -257,9 +277,15 @@ ul {
   border-bottom: 0.0625rem solid var(--gray-lighter);
 } */
 
-.ft-main-item {
+.ft-cta-item {
   max-width: 90%;
   padding: 1.25rem;
+}
+
+.ft-cta-left {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black-lighter);
 }
 
 .ft-sign-up {
@@ -290,7 +316,7 @@ input[type="email"] {
   font-size: 1.0625rem;
   color: var(--black);
   text-align: center;
-  border: 0.0625rem solid var(--primary-lighter);
+  border: 0.0625rem solid var(--primary);
   border-bottom: var(--gray-darker);
   border-radius: 0.0625rem;
   padding: 1.0625rem 2.75rem 0.9375rem 2.75rem;
@@ -309,9 +335,9 @@ input[type="submit"] {
   font-size: 0.9375rem;
   font-weight: 700;
   color: var(--black-lighter);
-  background: var(--primary-lighter);
+  background: var(--primary);
   cursor: pointer;
-  border: 0.0625rem solid var(--primary-lighter);
+  border: 0.0625rem solid var(--primary);
   border-radius: 0.0625rem;
   padding: 1rem 4.5rem;
 }
@@ -319,13 +345,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
   color: var(--black-lighter);
   background: var(--white);
-  border: 0.0625rem solid var(--primary-lighter);
+  border: 0.0625rem solid var(--primary);
 }
 
 input[type="submit"]:active {
   color: var(--black-lighter);
   background: var(--white);
-  border: 0.0625rem solid var(--primary-lighter);
+  border: 0.0625rem solid var(--primary);
 }
 
 #form-desc {
@@ -341,7 +367,7 @@ input[type="submit"]:active {
   text-align: center;
 }
 
-.ft-author-logo {
+.ft-brand-logo {
   padding-bottom: 0.25rem;
 }
 
@@ -424,17 +450,18 @@ input[type="submit"]:active {
   .nav-items {
     flex-grow: 1;
   }
-
+  
   #mobile-hidden {
     display: none;
-  }
-
-  .ft-main {
-    justify-content: center;
   }
 }
 
 @media (min-width: 45rem /*720px and larger*/) {
+  .ft-cta {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   #mobile-only {
     display: none;
   }
@@ -447,10 +474,14 @@ input[type="submit"]:active {
 
   .nav-logo-section {
     padding-left: 0rem;
-  }  
+  }
 
-  .ft-main {
-    justify-content: center;
+  .nav-contact-section {
+    padding-right: 0rem;
+  }
+
+  .ft-cta {
+    padding: 9.375rem 0rem;
   }
 }
 
