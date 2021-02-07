@@ -265,7 +265,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1.25rem 0rem 1.25rem 0rem;
+  padding: 1.5rem 0rem 2.5rem 0rem;
 }
 
 /*.ft-cta:after {
@@ -292,8 +292,7 @@ ul {
   background: var(--white);
   border-radius: 0.125rem;
   width: 43ch;
-  padding: 2rem 0rem 2rem 0rem;
-  margin-bottom: 1.25rem;
+  padding: 3rem 0rem 3rem 0rem;
   text-align: center;
 }
 
@@ -459,7 +458,16 @@ input[type="submit"]:active {
 @media (min-width: 45rem /*720px and larger*/) {
   .ft-cta {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 4rem 0rem 5.5rem 0rem;
+  }
+
+  .ft-cta-left {
+    margin-left: 1.875rem;
+  }
+
+  .ft-cta-right {
+    margin-right: 1.875rem;
   }
 
   #mobile-only {
@@ -481,7 +489,32 @@ input[type="submit"]:active {
   }
 
   .ft-cta {
-    padding: 9.375rem 0rem;
+    justify-content: space-around;
+    padding: 9.375rem 0rem 8rem 0rem;
+  }
+
+  .ft-cta-heading {
+    font-size: 2rem;
+  }
+
+  .ft-sign-up {
+    width: 425px;
+    padding: 4rem 2rem 4rem 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ft-heading {
+    font-size: 1.25rem;
+    padding-bottom: 0.625rem;
+  }
+
+  input[type="email"] {
+    margin-bottom: 0.313rem;
+    border-bottom: 0.0625rem solid var(--primary);
+  }
+
+  #form-desc {
+    padding-top: 0.9375rem;
   }
 }
 
