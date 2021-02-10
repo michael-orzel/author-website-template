@@ -12,7 +12,7 @@
   --form-placeholder: #595959;
   --bg: #eae7dc;
   --bg-two: #D8C3A5;
-  --text: #8E8D8A;
+  --accent: #8E8D8A;
   --primary: #E85A4F;
   --primary-lighter: #E98074;
 }
@@ -28,17 +28,22 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-size: 1rem;
+  font-kerning: auto;
+  line-height: 1.5;
+  font-weight: 400;
   color: var(--black);
   background: var(--white);
-  line-height: 1.5;
-  line-length: 36rem;
-  font-weight: 400;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-top: 7rem;
   margin: 0;
+}
+
+p {
+  font-size: 1.25rem;
 }
 
 .container {
@@ -250,7 +255,7 @@ ul {
 
 .footer a:hover {
   color: var(--white);
-  border-bottom: 0.125rem solid var(--gray-darker);
+  border-bottom: 0.125rem solid var(--accent);
 }
 
 .footer a:active {
@@ -265,7 +270,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1.5rem 0rem 2.5rem 0rem;
+  padding: 1.5rem 0rem 2.75rem 0rem;
 }
 
 /*.ft-cta:after {
@@ -290,14 +295,13 @@ ul {
 
 .ft-sign-up {
   background: var(--white);
-  border-radius: 0.125rem;
-  width: 43ch;
-  padding: 3rem 0rem 3rem 0rem;
+  border-radius: 0.065rem;
+  max-width: 385px;
+  padding: 2rem 0.5rem;
   text-align: center;
 }
 
-.ft-heading {
-  font-family: sans-serif;
+#ft-sign-up-heading {
   font-size: 1.125rem;
   color: var(--black-lighter);
   padding-bottom: 0.625rem;
@@ -318,8 +322,9 @@ input[type="email"] {
   border: 0.0625rem solid var(--primary);
   border-bottom: var(--gray-darker);
   border-radius: 0.0625rem;
-  padding: 1.0625rem 2.75rem 0.9375rem 2.75rem;
+  padding: 1.0625rem 2.125rem 0.9375rem 2.125rem;
   margin-top: 2rem;
+  width: 83%;
   
 }
 
@@ -331,29 +336,31 @@ input[type="email"]::placeholder {
 }
 
 input[type="submit"] {
-  font-size: 0.9375rem;
+  font-size: 13px;
   font-weight: 700;
   color: var(--black-lighter);
   background: var(--primary);
   cursor: pointer;
   border: 0.0625rem solid var(--primary);
   border-radius: 0.0625rem;
-  padding: 1rem 4.5rem;
+  padding: 1.125rem 4.5625rem;
+  width: 83%;
 }
 
 input[type="submit"]:hover {
   color: var(--black-lighter);
-  background: var(--white);
-  border: 0.0625rem solid var(--primary);
+  background: var(--primary-lighter);
+  border: 0.0625rem solid var(--primary-lighter);
 }
 
 input[type="submit"]:active {
   color: var(--black-lighter);
-  background: var(--white);
-  border: 0.0625rem solid var(--primary);
+  background: var(--primary-lighter);
+  border: 0.0625rem solid var(--primary-lighter);
 }
 
-#form-desc {
+#ft-sign-up-desc {
+  font-size: 1.125rem;
   font-style: italic;
   width: 30ch;
   color: var(--gray-darkest);
@@ -470,12 +477,32 @@ input[type="submit"]:active {
     margin-right: 1.875rem;
   }
 
+  .ft-sign-up {
+    max-width: 325px;
+  }
+  
+  input[type="email"] {
+    width: 88%;
+  }
+
+  input[type="submit"] {
+    width: 88%;
+  }
+
   #mobile-only {
     display: none;
   }
 }
 
 @media (min-width: 77.5rem /*1240px and larger*/) {
+  body {
+    font-size: 1.3125rem;
+  }
+
+  p {
+    font-size: 1.3125rem;
+  }
+
   .nav {
     justify-content: space-around;
   }
@@ -498,12 +525,12 @@ input[type="submit"]:active {
   }
 
   .ft-sign-up {
-    width: 425px;
-    padding: 4rem 2rem 4rem 2rem;
+    max-width: 455px;
+    padding: 4rem 2rem;
     margin-bottom: 1.25rem;
   }
 
-  .ft-heading {
+  #ft-sign-up-heading {
     font-size: 1.25rem;
     padding-bottom: 0.625rem;
   }
@@ -513,7 +540,12 @@ input[type="submit"]:active {
     border-bottom: 0.0625rem solid var(--primary);
   }
 
-  #form-desc {
+  input[type="submit"] {
+    font-size: 18px;
+    padding: 1rem 4.5625rem;
+  }
+
+  #ft-sign-up-desc {
     padding-top: 0.9375rem;
   }
 }
