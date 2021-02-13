@@ -263,6 +263,8 @@ ul {
   border-bottom: 0.125rem solid var(--gray-darker);
 }
 
+/* Footer CTA Section */
+
 .ft-cta {
   background: var(--bg);
   display: flex;
@@ -273,26 +275,50 @@ ul {
   padding: 1.5rem 0rem 2.75rem 0rem;
 }
 
-/*.ft-cta:after {
-  content: ""; 
-  display: block; 
-  margin: 0rem auto; 
-  width: 80%; 
-  padding-top: 2.5rem; 
-  border-bottom: 0.0625rem solid var(--gray-lighter);
-} */
-
 .ft-cta-item {
   max-width: 90%;
   padding: 1.25rem;
 }
 
+/* CTA Left */
 .ft-cta-left {
   font-size: 1rem;
   font-weight: 400;
   color: var(--black-lighter);
 }
 
+.ft-cta-heading {
+  padding-bottom: 20px;
+}
+
+.ft-cta p {
+  padding-bottom: 30px;
+}
+
+.ft-cta-text ul li {
+  padding-bottom: 15px;
+}
+
+.ft-cta-li-icon {
+  font-size: 1.25rem;
+  color: var(--primary);
+  background: var(--black-lighter);
+  border-right: 0.1rem solid var(--black-lighter);
+  border-left: 0.1rem solid var(--black-lighter);
+}
+
+.ft-cta-li-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0px 0px 0px 7px;
+}
+
+.ft-cta-li-update {
+  font-size: 1.25rem;
+}
+/* end CTA Left */
+
+/* CTA Right */
 .ft-sign-up {
   background: var(--white);
   border-radius: 0.065rem;
@@ -366,6 +392,9 @@ input[type="submit"]:active {
   color: var(--gray-darkest);
   margin-top: 0.75rem;
 }
+/* end CTA Right */
+
+/* end Footer CTA Section */
 
 .ft-author {
   font-size: 1.125rem;
@@ -435,10 +464,6 @@ input[type="submit"]:active {
 #always-hidden {
   display: none;
 }
-
-/*.ft-legal-list li:nth-last-child(2) {
-    flex: 1;
-}*/
 
 /* Media Queries */
 
@@ -516,17 +541,26 @@ input[type="submit"]:active {
   }
 
   .ft-cta {
-    justify-content: space-around;
+    justify-content: center;
     padding: 9.375rem 0rem 8rem 0rem;
   }
 
   .ft-cta-heading {
     font-size: 2rem;
+    padding-bottom: 45px;
+  }
+
+  .ft-cta-text {
+    font-size: 1.3125rem;
+  }
+  
+  .ft-cta p {
+    padding-bottom: 40px;
   }
 
   .ft-sign-up {
     max-width: 455px;
-    padding: 4rem 2rem;
+    padding: 3.625rem 2rem 1.5rem 2rem;
     margin-bottom: 1.25rem;
   }
 
