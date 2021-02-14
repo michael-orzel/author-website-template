@@ -276,8 +276,7 @@ ul {
 }
 
 .ft-cta-item {
-  max-width: 90%;
-  padding: 1.25rem;
+  flex-basis: 50%;
 }
 
 /* CTA Left */
@@ -285,6 +284,7 @@ ul {
   font-size: 1rem;
   font-weight: 400;
   color: var(--black-lighter);
+  padding: 1.25rem;
 }
 
 .ft-cta-heading {
@@ -467,7 +467,7 @@ input[type="submit"]:active {
 
 /* Media Queries */
 
-@media (max-width: 45rem /*720px and smaller*/) {
+@media (max-width: 45rem /*Phone - less than 720px*/) {
   body {
     padding-top: 0rem;
     padding-bottom: 3.5rem;
@@ -487,23 +487,17 @@ input[type="submit"]:active {
   }
 }
 
-@media (min-width: 45rem /*720px and larger*/) {
+@media (min-width: 45rem /*Tablet - more than 720px*/) {
   .ft-cta {
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 4rem 0rem 5.5rem 0rem;
-  }
-
-  .ft-cta-left {
-    margin-left: 1.875rem;
-  }
-
-  .ft-cta-right {
-    margin-right: 1.875rem;
+    justify-content: space-between;
+    padding: 3rem 0rem 5rem 0rem;
   }
 
   .ft-sign-up {
     max-width: 325px;
+    padding: 1.75rem 0.5rem 0rem 0.5rem;
+    margin-right: 1.25rem;
   }
   
   input[type="email"] {
@@ -519,7 +513,21 @@ input[type="submit"]:active {
   }
 }
 
-@media (min-width: 77.5rem /*1240px and larger*/) {
+@media (min-width: 57rem /*Footer CTA threshold*/) {
+  .ft-cta {
+    justify-content: space-around;
+  }
+
+  .ft-cta-left {
+    padding: 1.25rem 0rem 1.25rem 0rem;
+  }
+
+  .ft-sign-up {
+    margin-right: 0rem;
+  }
+}
+
+@media (min-width: 77.5rem /*Desktop - more than 1240px*/) {
   body {
     font-size: 1.3125rem;
   }
@@ -541,7 +549,7 @@ input[type="submit"]:active {
   }
 
   .ft-cta {
-    justify-content: center;
+    
     padding: 9.375rem 0rem 8rem 0rem;
   }
 
@@ -581,6 +589,12 @@ input[type="submit"]:active {
 
   #ft-sign-up-desc {
     padding-top: 0.9375rem;
+  }
+}
+
+@media (min-width: 85rem /*Footer CTA threshold*/) {
+  .ft-cta {
+    justify-content: center;
   }
 }
 
