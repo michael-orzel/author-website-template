@@ -284,7 +284,8 @@ ul {
   font-size: 1rem;
   font-weight: 400;
   color: var(--black-lighter);
-  padding: 1.25rem;
+  width: 90%;
+  padding: 1.25rem 0rem 1.25rem 0rem;
 }
 
 .ft-cta-heading {
@@ -323,7 +324,7 @@ ul {
   background: var(--white);
   border-radius: 0.065rem;
   max-width: 385px;
-  padding: 2rem 0.5rem;
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
   text-align: center;
 }
 
@@ -488,10 +489,20 @@ input[type="submit"]:active {
 }
 
 @media (min-width: 45rem /*Tablet - more than 720px*/) {
+  #mobile-only {
+    display: none;
+  }
+}
+
+@media (min-width: 47rem /*Tablet - account for Ftr CTA margins*/) {
   .ft-cta {
     flex-direction: row;
     justify-content: space-between;
-    padding: 3rem 0rem 5rem 0rem;
+    padding: 3rem 0rem 4rem 0rem;
+  }
+
+  .ft-cta-left {
+    margin-left: 1.25rem;
   }
 
   .ft-sign-up {
@@ -507,22 +518,21 @@ input[type="submit"]:active {
   input[type="submit"] {
     width: 88%;
   }
-
-  #mobile-only {
-    display: none;
-  }
 }
 
-@media (min-width: 57rem /*Footer CTA threshold*/) {
+@media (min-width: 57rem /*Tablet - Ftr CTA threshold*/) {
   .ft-cta {
     justify-content: space-around;
   }
 
   .ft-cta-left {
-    padding: 1.25rem 0rem 1.25rem 0rem;
+    padding: 1.25rem 65px 1.25rem 0rem;
+    margin-left: 0rem;
   }
 
   .ft-sign-up {
+    max-width: 385px;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
     margin-right: 0rem;
   }
 }
@@ -549,7 +559,6 @@ input[type="submit"]:active {
   }
 
   .ft-cta {
-    
     padding: 9.375rem 0rem 8rem 0rem;
   }
 
@@ -592,9 +601,14 @@ input[type="submit"]:active {
   }
 }
 
-@media (min-width: 85rem /*Footer CTA threshold*/) {
+@media (min-width: 85rem /*Desktop - Ftr CTA threshold*/) {
   .ft-cta {
     justify-content: center;
+  }
+
+  .ft-cta-left {
+    max-width: 550px;
+    margin-right: 95px;
   }
 }
 
