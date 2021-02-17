@@ -10,15 +10,23 @@
   <body>
     <div class="overlay"></div>
       <header>
-        <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <nav class="nav" aria-label="Navigation Display">
+          <div class="nav-logo-section">
+            <a href="index.html" class="nav-brand-logo">Conan Doyle</a>
+          </div>
+          
           <div class="nav-items">
             <ul role="menubar">
-              <li><a href="index.html" role="menuitem">Home</a></li>
+              <li><a href="index.html" role="menuitem" id="mobile-hidden">Home</a></li>
               <li><a href="about.html" role="menuitem">About</a></li>
               <li><a href="books.html" role="menuitem">Books</a></li>
-              <li><a href="blog.html" role="menuitem" id="mobile-hidden" aria-current="page">Blog</a></li>
-              <li><a href="contact.html" role="menuitem" id="mobile-hidden">Contact</a></li>
+              <li><a href="blog.html" role="menuitem" aria-current="page" id="mobile-hidden">Blog</a></li>
+              <li><a href="contact.html" role="menuitem" id="always-hidden">Contact</a></li>
             </ul>
+          </div>
+
+          <div class="nav-contact-section">
+            <a href="contact.html" class="nav-contact" id="mobile-hidden">Contact</a>
           </div>
           
           <button type="button" class="nav-bars" id="mobile-only">
@@ -27,7 +35,7 @@
         </nav>
         
         <!-- modify nav-items class names to make css for dropdown -->
-        <nav class="nav-dropdown" role="navigation" aria-label="Full Navigation List">
+        <nav class="nav-dropdown" role="navigation" aria-label="Main Navigation List">
           <div class="nav-items"> <!-- remove?? -->
             <ul role="menubar">
               <li><a href="index.html" role="menuitem">Home</a></li>
@@ -40,7 +48,7 @@
         </nav>
 
         <div class="site-header">
-          <h1 class="site-title">Blog</h1>
+          <h1 class="site-title">Arthur Conan Doyle - Blog</h1>
         </div>
         
       </header>
@@ -49,7 +57,7 @@
         
         <div class="hero-image" role="banner">
           <div class="hero-text">
-            
+
           </div>
         </div>
 
@@ -59,24 +67,55 @@
 
     <footer role="contentinfo" class="footer">
 
-      <section class="ft-main">
-        <div class="ft-main-item ft-sign-up">
-          <h2 class="ft-heading">Sign-up for Arthur's Newsletter:</h2>
-          <p id="form-desc">Arthur updates infrequently.
-            His newsletter covers new releases and existing works. (Not a real newsletter sign-up).
-          </p>
+      <section class="ft-cta">
+
+        <div class="ft-cta-item ft-cta-left">
+          <h2 class="ft-cta-heading">
+            Follow Doyle
+          </h2>
+          <div class="ft-cta-text">
+            <p>
+              Doyle loves sharing his work with others. His newsletter contains the following: fdsjklfajdas;jf;da fdjksajf; fjdk;sajflk;a
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check-square ft-cta-li-icon"></i>
+                <span class="ft-cta-li-text">The Modern Sherlockian newsletter </span>
+                <em class="ft-cta-li-update">(Monthly)</em>
+              </li>
+              <li>
+                <i class="fas fa-check-square ft-cta-li-icon"></i>
+                <span class="ft-cta-li-text">Updates on new releases </span>
+                <em class="ft-cta-li-update">(Quarterly)</em>
+              </li>
+              <li>
+                <i class="fas fa-check-square ft-cta-li-icon"></i>
+                <span class="ft-cta-li-text">Discounts and offers on his books </span>
+                <em class="ft-cta-li-update">(A couple times per year)</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ft-cta-item ft-sign-up ft-cta-right">
           <form role="form">
-            <input type="email" name="email" placeholder="Enter email address" required aria-label="Newsletter Sign-up" aria-describedby="form-desc" aria-required="true">
-            <input type="submit" value="Submit" role="button">
+            <h3 id="ft-sign-up-heading">Peek into the mind of fiction's great detective.</h2>
+            <input type="email" name="email" placeholder="My email address is..." required aria-label="Newsletter Sign-up" aria-describedby="form-desc" aria-required="true">
+            <input type="submit" value="Try the free newsletter" role="button">
+            <p id="ft-sign-up-desc">
+              No spam. Only insight into Doyle's storied works.
+            </p>
           </form>
         </div>
 
-        <div class="ft-main-item">
-          <a href="contact.html" class="contact-link">Contact</a>
-        </div>
       </section>
-      
+
+      <section class="ft-author">
+        <a href="index.html" class="ft-brand-logo">Conan Doyle</a>
+      </section>
+
       <section class="ft-social">
+        <p class="ft-social-header">Socials</p>
         <ul class="ft-social-list">
           <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
           <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
@@ -99,6 +138,8 @@
           <li><a href="https://en.wikipedia.org/wiki/Terms_of_service">Terms &amp; Conditions</a></li>
           <li>|</li>
           <li><a href="https://en.wikipedia.org/wiki/Privacy_policy">Privacy Policy</a></li>
+          <li>|</li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </section>
 
