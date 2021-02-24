@@ -34,11 +34,11 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: var(--black);
-  background: var(--white);
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 7rem;
+  padding-top: 4rem;
   margin: 0;
 }
 
