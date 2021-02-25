@@ -1,29 +1,91 @@
-.banner {
+.hero {
     background: linear-gradient(to bottom, var(--bg) 50%, var(--white) 50%);
-    padding: 20px 0px 50px 0px;
+    padding: 30px 0px 50px 0px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner__cta-link {
+.hero__site-title {
+    padding-bottom: 25px;
+}
+
+.hero__quote {
+    max-width: 80%;
+    padding-bottom: 23px;
+}
+
+.hero__img {
+    max-width: 37.5%;
+    height: auto;
+    padding-bottom: 23px;
+}
+
+.hero__title {
+    font-size: 18px;
+    width: 80%;
+    padding-bottom: 25px;
+}
+
+.hero__cta {
+    padding: 1.5rem 0rem;
+}
+
+.hero__cta-link {
     background: var(--primary);
     color: var(--black-lighter);
+    font-weight: 600;
     padding: 1rem 1.5rem;
     border-radius: 0.0625rem;
     text-decoration: none;
 }
 
-.banner__cta-link:hover {
+.hero__cta-link:hover {
     background: var(--primary-lighter);
     color: var(--black-lighter);
 }
 
-.banner__cta-link:active {
+.hero__cta-link:active {
     background: var(--primary-lighter);
     color: var(--black-lighter);
 }
 
-.banner__cta-link-alt {
+.hero__cta-link-alt {
     background: var(--white);
     color: var(--black-lighter);
     border: 1px solid var(--bg-two);
+}
+
+.hero__cta-link-alt:hover {
+    background: var(--bg-two);
+    color: var(--black-lighter);
+}
+
+.hero__cta-link-alt:active {
+    background: var(--bg-two);
+    color: var(--black-lighter);
+}
+
+/* Media Queries */
+
+@media (max-width: 45rem /*Phone - less than 720px*/) {
+
+}
+
+@media (min-width: 45rem /*Tablet - more than 720px*/) {
+    .hero__img {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 77.5rem /*Desktop - more than 1240px*/) {
+    .hero {
+        padding: 80px 0px 160px 0px;
+    }
+
+    .hero__title {
+        font-size: 21px;
+    }
 }
