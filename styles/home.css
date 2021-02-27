@@ -1,3 +1,45 @@
+/* ---------- Home Page Universals ---------- */
+
+.link-button {
+    background: var(--white);
+    color: var(--black-lighter);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--black-lighter);
+    border-radius: 0.0625rem;
+    text-decoration: none;
+}
+
+.link-button:hover {
+    background: var(--bg-two);
+    color: var(--black-lighter);
+    border: 1px solid var(--black-lighter);
+}
+
+.link-button:active {
+    background: var(--bg-two);
+    color: var(--black-lighter);
+    border: 1px solid var(--black-lighter);
+}
+
+.link-button__main {
+    background: var(--primary);
+    color: var(--black-lighter);
+    border: 1px solid var(--primary);
+}
+
+.link-button__main:hover {
+    background: var(--primary-lighter);
+    color: var(--black-lighter);
+    border: 1px solid var(--primary-lighter);
+}
+
+.link-button__main:active {
+    background: var(--primary-lighter);
+    color: var(--black-lighter);
+    border: 1px solid var(--primary-lighter);
+}
+
 /* ---------- Hero Section ---------- */
 
 .hero {
@@ -23,6 +65,7 @@
     max-width: 37.5%;
     height: auto;
     padding-bottom: 23px;
+    border-radius: 2px;
 }
 
 .hero__title {
@@ -35,46 +78,6 @@
     padding: 1.5rem 0rem;
 }
 
-.hero__cta-link {
-    background: var(--primary);
-    color: var(--black-lighter);
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid var(--primary);
-    border-radius: 0.0625rem;
-    text-decoration: none;
-}
-
-.hero__cta-link:hover {
-    background: var(--primary-lighter);
-    color: var(--black-lighter);
-    border: 1px solid var(--primary-lighter);
-}
-
-.hero__cta-link:active {
-    background: var(--primary-lighter);
-    color: var(--black-lighter);
-    border: 1px solid var(--primary-lighter);
-}
-
-.hero__cta-link-alt {
-    background: var(--white);
-    color: var(--black-lighter);
-    border: 1px solid var(--black-lighter);
-}
-
-.hero__cta-link-alt:hover {
-    background: var(--bg-two);
-    color: var(--black-lighter);
-    border: 1px solid var(--black-lighter);
-}
-
-.hero__cta-link-alt:active {
-    background: var(--bg-two);
-    color: var(--black-lighter);
-    border: 1px solid var(--black-lighter);
-}
-
 /* ---------- Bio Section ---------- */
 
 .bio {
@@ -83,12 +86,36 @@
     padding: 50px 0px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.bio__text {
-    width: 90%;
+.bio__text-section {
+    width: 80%;
+}
+
+.bio__title {
+    padding-bottom: 20px;
+}
+
+.bio__desc {
+    padding-bottom: 20px;
+}
+
+.bio__learn-more {
+    padding: 20px 0px;
+}
+
+.bio__image-section {
+    width: 80%;
+    padding-top: 1.25rem;
+}
+
+.bio__img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 2px;
 }
 
 /* ---------- Media Queries ---------- */
@@ -116,7 +143,7 @@
         font-size: 21px;
     }
 
-    .hero__cta-link {
+    .link-button {
         font-size: 20px;
     }
 }
