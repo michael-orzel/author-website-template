@@ -293,7 +293,7 @@ ul {
 }
 
 .ft-cta p {
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
 }
 
 .ft-cta-text ul li {
@@ -311,7 +311,7 @@ ul {
 .ft-cta-li-text {
   font-size: 1.25rem;
   font-weight: 600;
-  padding: 0px 0px 0px 7px;
+  padding: 0rem 0rem 0rem 0.438rem;
 }
 
 .ft-cta-li-update {
@@ -323,7 +323,7 @@ ul {
 .ft-sign-up {
   background: var(--white);
   border-radius: 0.065rem;
-  max-width: 385px;
+  max-width: 24.063rem;
   padding: 2rem 0.5rem 0.5rem 0.5rem;
   text-align: center;
 }
@@ -363,7 +363,7 @@ input[type="email"]::placeholder {
 }
 
 input[type="submit"] {
-  font-size: 13px;
+  font-size: 0.813rem;
   font-weight: 700;
   color: var(--black-lighter);
   background: var(--primary);
@@ -506,7 +506,7 @@ input[type="submit"]:active {
   }
 
   .ft-sign-up {
-    max-width: 325px;
+    max-width: 20.313rem;
     padding: 1.75rem 0.5rem 0rem 0.5rem;
     margin-right: 1.25rem;
   }
@@ -526,12 +526,12 @@ input[type="submit"]:active {
   }
 
   .ft-cta-left {
-    padding: 1.25rem 65px 1.25rem 0rem;
+    padding: 1.25rem 4.063rem 1.25rem 0rem;
     margin-left: 0rem;
   }
 
   .ft-sign-up {
-    max-width: 385px;
+    max-width: 24.063rem;
     padding: 2rem 0.5rem 0.5rem 0.5rem;
     margin-right: 0rem;
   }
@@ -564,7 +564,7 @@ input[type="submit"]:active {
 
   .ft-cta-heading {
     font-size: 2rem;
-    padding-bottom: 45px;
+    padding-bottom: 2.813rem;
   }
 
   .ft-cta-text {
@@ -572,11 +572,11 @@ input[type="submit"]:active {
   }
   
   .ft-cta p {
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
   }
 
   .ft-sign-up {
-    max-width: 455px;
+    max-width: 28.438rem;
     padding: 3.625rem 2rem 1.5rem 2rem;
     margin-bottom: 1.25rem;
   }
@@ -592,7 +592,7 @@ input[type="submit"]:active {
   }
 
   input[type="submit"] {
-    font-size: 18px;
+    font-size: 1.125rem;
     padding: 1rem 4.5625rem;
   }
 
@@ -607,8 +607,8 @@ input[type="submit"]:active {
   }
 
   .ft-cta-left {
-    max-width: 550px;
-    margin-right: 95px;
+    max-width: 34.375rem;
+    margin-right: 5.938rem;
   }
 }
 
